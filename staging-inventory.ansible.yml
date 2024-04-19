@@ -1,11 +1,11 @@
 all:
   hosts:
     webserver1:
-      ansible_host: 3.86.26.57
+      ansible_host: 172.31.88.241
     webserver2:
-      ansible_host: 3.86.26.57
+      ansible_host: 172.31.95.204
     dbserver1:
-      ansible_host: 3.86.26.57
+      ansible_host: 172.31.92.33
 
   children:
     webservers:
@@ -21,4 +21,4 @@ all:
         database_servers:
       vars:
         ansible_user: ubuntu
-        ansible_ssh_private_key_file: key.pem
+        ansible_ssh_private_key_file: client_key.pem
